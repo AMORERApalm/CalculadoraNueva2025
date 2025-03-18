@@ -29,8 +29,8 @@ jobs:
       - name: 📦 Configurar Maven
         run: mvn --version
 
-        - name: Verificar si el archivo pom.xml está presente
-          run: |
+      - name: Verificar si el archivo pom.xml está presente
+        run: |
           if [ ! -f pom.xml ]; then
             echo "No se encontró pom.xml en la raíz del proyecto"
             exit 1
