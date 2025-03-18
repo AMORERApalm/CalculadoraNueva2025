@@ -11,6 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest  # Ejecutar en Linux
+    working-directory: CalculadoraNueva2025
     
     steps:
       - name: 🛠️ Clonar repositorio
