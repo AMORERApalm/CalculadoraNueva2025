@@ -3,10 +3,10 @@ name: Ejecutar pruebas JUnit
 on:
   push:
     branches:
-      - main  # Ejecutar en cada push a la rama main
+      - master  # Ejecutar en cada push a la rama main
   pull_request:
     branches:
-      - main  # También ejecutar en pull requests
+      - master  # También ejecutar en pull requests
 
 jobs:
   test:
@@ -25,10 +25,11 @@ jobs:
 
       - name: List files
         run: ls -R
-        
+         
       - name: 📦 Configurar Maven
         run: mvn --version
 
       - name: 🔨 Construir y ejecutar pruebas JUnit
+        cd CalculadoraNueva2025  # Mueve a la carpeta correcta si es necesario
         run: mvn test
       
