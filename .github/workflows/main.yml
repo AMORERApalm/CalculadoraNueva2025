@@ -3,7 +3,7 @@ name: Ejecutar pruebas JUnit
 on:
   push:
     branches:
-      - master  # Ejecutar en cada push a la rama main
+      - master  # Ejecutar en cada push a la rama master
   pull_request:
     branches:
       - master  # También ejecutar en pull requests
@@ -11,11 +11,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest  # Ejecutar en Linux
-    
-    
+
     steps:
       - name: 🛠️ Clonar repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: ☕ Instalar Java 17
         uses: actions/setup-java@v3
@@ -23,19 +22,18 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: List files
+      - name: 📂 Listar archivos en el directorio
         run: ls -R
 
-      - name: 📦 Configurar Maven
+      - name: 📦 Verificar instalación de Maven
         run: mvn --version
 
-      - name: Verificar si el archivo pom.xml está presente
+      - name: 🔍 Verificar si pom.xml está presente
         run: |
           if [ ! -f pom.xml ]; then
-            echo "No se encontró pom.xml en la raíz del proyecto"
+            echo "⚠️ No se encontró pom.xml en la raíz del proyecto"
             exit 1
           fi
 
       - name: 🔨 Construir y ejecutar pruebas JUnit
         run: mvn test
-      
