@@ -63,11 +63,12 @@ public class CalculadoraNueva2025Test {
     // Test parametrizados para el metodo sumar
     @ParameterizedTest
     @CsvSource({
-        "1,2,3",
-        "2,3,5",
+        "8,4,12",
+        "-25,-40,-65",
         "-1,-1,-2",
         "0,0,0",
-        "100,200,300"
+        "100,200,300",
+        "2,3,5"
     })
 
     void SumaParametrizada(int a, int b, int resultadoesperado) {
