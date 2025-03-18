@@ -6,7 +6,7 @@ package com.mycompany.calculadoranueva2025;
 
 /**
  *
- * @author winadmin Modifico el programa para subir cambios
+ * @author winadmin Modifico el programa para subir cambios y nuevos
  */
 public class CalculadoraNueva2025 {
 
