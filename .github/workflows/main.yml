@@ -3,10 +3,10 @@ name: Ejecutar pruebas JUnit
 on:
   push:
     branches:
-      - master  # Ejecutar en cada push a la rama main
+      - main  # Ejecutar en cada push a la rama main
   pull_request:
     branches:
-      - master  # También ejecutar en pull requests
+      - main  # También ejecutar en pull requests
 
 jobs:
   test:
