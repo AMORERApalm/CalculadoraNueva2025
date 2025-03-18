@@ -30,6 +30,6 @@ jobs:
         run: mvn --version
 
       - name: 🔨 Construir y ejecutar pruebas JUnit
-        cd CalculadoraNueva2025  # Mueve a la carpeta correcta si es necesario
-        run: mvn test
+                run: cd CalculadoraNueva2025  # Mueve a la carpeta correcta si es necesario
+                     mvn test
       
