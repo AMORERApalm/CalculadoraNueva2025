@@ -31,4 +31,4 @@ jobs:
 
       - name: 🔨 Construir y ejecutar pruebas JUnit
         run: mvn test
-        working-directory: CalculadoraNueva2025
+      
