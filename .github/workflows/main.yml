@@ -11,7 +11,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest  # Ejecutar en Linux
-    working-directory: CalculadoraNueva2025
+    
     
     steps:
       - name: 🛠️ Clonar repositorio
@@ -26,5 +26,12 @@ jobs:
       - name: 📦 Configurar Maven
         run: mvn --version
 
+      - name: List files
+        run: ls -R
+
       - name: 🔨 Construir y ejecutar pruebas JUnit
         run: mvn test
+        working-directory: CalculadoraNueva2025
+
+
+
