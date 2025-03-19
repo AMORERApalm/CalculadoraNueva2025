@@ -55,7 +55,7 @@ public class CalculadoraNueva2025Test {
     @Test
     public void restartest() {
         int resultado1 = CalculadoraNueva2025.restar(10, 5);
-        assertEquals(6, resultado1);
+        assertEquals(5, resultado1);
         assertNotEquals (2, resultado1);
         
     }
