@@ -22,6 +22,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: 📂 Listar archivos en el directorio
+        run: ls -R
+
       - name: 📦 Verificar instalación de Maven
         run: mvn --version
 
