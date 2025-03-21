@@ -30,3 +30,21 @@ jobs:
 
       - name: 🔨 Construir y ejecutar pruebas JUnit
         run: mvn test
+
+lint:
+    runs-on: ubuntu-latest  
+    steps:
+      - name: 🛠️ Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: 🏗️ Instalar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: 📦 Instalar dependencias de ESLint
+        run: npm install
+
+      - name: 🔍 Analizar código con ESLint
+        run: npm run lint
+
