@@ -31,7 +31,7 @@ jobs:
       - name: 🔨 Construir y ejecutar pruebas JUnit
         run: mvn test
 
-lint:
+  lint:
     runs-on: ubuntu-latest  
     steps:
       - name: 🛠️ Clonar repositorio
