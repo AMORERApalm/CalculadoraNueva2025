@@ -40,7 +40,7 @@ public class CalculadoraNueva2025Test {
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
-    // Test para el metodo sumar.
+    // Test para el metodo sumar
     @Test
     public void sumartest() {
         int resultado1 = CalculadoraNueva2025.sumar(10, 5);
